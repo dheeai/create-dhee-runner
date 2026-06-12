@@ -1,0 +1,46 @@
+{
+  "name": "create-dhee-runner",
+  "version": "0.1.0",
+  "description": "Scaffold a new dhee-runner-* package (a node executor for the Dhee engine). Run via `npm create dhee-runner`.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "keywords": [
+    "dhee",
+    "dhee-runner",
+    "scaffold",
+    "create"
+  ],
+  "bin": {
+    "create-dhee-runner": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "typescript": "^5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dheeai/create-dhee-runner.git"
+  },
+  "homepage": "https://github.com/dheeai/create-dhee-runner#readme"
+}
